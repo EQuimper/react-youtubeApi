@@ -7,6 +7,12 @@ import VideoList from './components/VideoList.jsx';
 import VideoDetail from './components/VideoDetail.jsx';
 const API_KEY = 'AIzaSyDW0PS3mvaWvAvcIHWGwFzDuyd7MudMVFU';
 
+const styles = {
+  title: {
+    textAlign: 'center',
+    marginTop: '20px'
+  }
+};
 
 class App extends Component {
   constructor(props){
@@ -36,6 +42,7 @@ class App extends Component {
 
     return (
       <div>
+        <h1 style={styles.title}>Youtube Api With React</h1>
         <SearchBar onSearchTermChange={videoSearch} />
         <VideoDetail video={this.state.selectedVideo} />
         <VideoList
